@@ -25,7 +25,7 @@ export default function Home() {
       <div className='flex justify-center items-center h-full'>
         <div>
         <div>
-        <input onChange={(e)=> setAddress(e.target.value)} placeholder='walletAddress' className="text-black"/>
+        <input onChange={(e)=> setAddress(e.target.value)} placeholder='walletAddress' className="text-black" value={address}/>
         <button onClick={()=>submitHandler(address)} className="bg-purple-600 ml-2 p-1 rounded-xl">submit</button>
         <select className='text-black m-2' onChange={(e)=> setUrl(e.target.value as web3.Cluster)}>
           <option value={'devnet'}>
